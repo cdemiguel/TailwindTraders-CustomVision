@@ -3,7 +3,7 @@
 ## What is Azure Custom Vision?
 Custom Vision service uses a machine learning algorithm to apply labels to images. You, the developer, must submit groups of images that feature and lack the characteristics in question. You label the images yourself at the time of submission. Then the algorithm trains to this data and calculates its own accuracy by testing itself on those same images. Once the algorithm is trained, you can test, retrain, and eventually use it to classify new images according to the needs of your app. You can also export the model itself for offline use.
 
-In this Readme we are going to explain how to create and train a model to use in our Tailwind Traders application. 
+In this Readme we are going to explain **how to create and train a model to use in our Tailwind Traders application**. 
 
 ## Prerequisites
 A valid Azure subscription. [Create an account for free](https://azure.microsoft.com/es-es/free/).
@@ -17,9 +17,9 @@ In your web browser, navigate to the [Custom Vision](https://www.customvision.ai
 To create your first project, select New Project. The Create new project dialog box will appear.
 Edit and configure the options as shown in the image.
 It is important select:
-- Project Types: Classification
-- Domains: Retail (Compact) - it will allow us to download the model file.
-- Export Capabilities: Basic Platforms
+- **Project Types: Classification**
+- **Domains: Retail (Compact)** - it will allow us to download the model file.
+- **Export Capabilities: Basic Platforms**
 
 ![Create project options](./images/CreateProject.PNG "Create project options")
 
@@ -31,14 +31,15 @@ In these case the action is repeated three times one per tag.
 To create a tag, enter text in the My Tags field and press Enter. If the tag already exists, it will appear in a dropdown menu. In a multilabel project, you can add more than one tag to your images, but in a multiclass project you can add only one. To finish uploading the images, use the Upload [number] files button.
 
 ![Upload and tag images](./images/AddImagesAndTag.PNG "Upload and tag images")
-Of course we could add one or more images inside different tags.
 
 Continue and end the process.
 
 ![All images uploaded and tagged](./images/AllUploadedImages.PNG "All images uploaded and tagged")
 
 ## Train the classifier
-To train the classifier, select the Train button. The classifier uses all of the current images to create a model that identifies the visual qualities of each tag.
+To train the classifier, select the **Train button**. The classifier uses all of the current images to create a model that identifies the visual qualities of each tag.
+
+![Train model process](./images/TrainModel.PNG "Train model process")
 
 The training process should only take a few minutes. During this time, information about the training process is displayed in the Performance tab.
 
@@ -50,7 +51,7 @@ After training has completed, the model's performance is estimated and displayed
 
 - Recall indicates the fraction of actual classifications that were correctly identified. For example, if there were actually 100 images of apples, and the model identified 80 as apples, the recall would be 80%.
 
-![Trained Model](./images/EndTrainModel.PNG "Trained Model")
+![Trained model](./images/EndTrainModel.PNG "Trained model")
 
 ## Download resources
 Custom Vision Service allows classifiers to be exported to run offline. You can embed your exported classifier into an application and run it locally on a device for real-time classification.
@@ -59,28 +60,27 @@ Remember that only selected compact options will have available the download opt
 
 Select Export button in Performance section.
 
-- Select Tensorflow for Android option.
+- **Select Tensorflow for Android option.**
 
-This option it is important because we need the required extension ".pb" for our Tailwind Traders application. 
+**This option it is important** because we need the required extension ".pb" for our Tailwind Traders application. 
 
 ![Export and download resources](./images/ExportTrainModel.PNG "Export and download resources")
 
-Clicking download button must generate and a .zip file with all required resources.
+**Clicking download** button must generate and a .zip file with all required resources.
 
 ![Results files](./images/Result.PNG "Results files")
 
 
 ## Next steps
-- Replace the old files with the new ones ("model.pb" and "labels.txt")  from Tailwind Traders Backend project (Tailwind.Traders.ImageClassifier.Api).
-- Rebuild application to refresh the changes.
+- **Replace the old files with the new ones** ("model.pb" and "labels.txt")  from Tailwind Traders Backend project (Tailwind.Traders.ImageClassifier.Api).
+- **Rebuild** application to refresh the changes.
 If the aplication does not build correctly see considerations part.
-- Run the application. 
+- **Run** the application. 
 
 ## Considerations
-- Use at least 50 images per tag (however, you can continue the process only with 15 images)
-- Important select compact options when you are going to create our project. It will allow to download the necessary files.
-- There's a chance that we will have to modify the settings of the image in our application (imageHeight and imageWidth  properties). Testing this example 
-we had to modify these properties to 244 value.
+- **Use at least 50 images per tag** (however, you can continue the process only with 15 images)
+- Important **select compact** options when you are going to create our project. It will allow to download the necessary files.
+- There's a chance that **we will have to modify the settings of the image in our application** (imageHeight and imageWidth  properties). Testing this example we had to modify these properties to 244 value.(Tailwind.Traders.ImageClassifier.Api).
 - Be sure that you are using categories and items that you have in Tailwind Traders Website, for example HardHat.
 
-for more information: [Create an account for free](https://azure.microsoft.com/es-es/free/).
+for more information: [More information](https://azure.microsoft.com/es-es/free/).
