@@ -32,7 +32,7 @@ To create a tag, enter text in the My Tags field and press Enter. If the tag alr
 
 ![Upload and tag images](./images/AddImagesAndTag.PNG "Upload and tag images")
 
-Continue and end the process.
+Continue and end the process with all images and tags requiered.
 
 ![All images uploaded and tagged](./images/AllUploadedImages.PNG "All images uploaded and tagged")
 
