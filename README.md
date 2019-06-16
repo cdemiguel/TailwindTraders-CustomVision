@@ -83,4 +83,4 @@ If the aplication does not build correctly see considerations part.
 - There's a chance that **we will have to modify the settings of the image in our application** (imageHeight and imageWidth  properties). Testing this example we had to modify these properties to 244 value.(Tailwind.Traders.ImageClassifier.Api).
 - Be sure that you are using categories and items that you have in Tailwind Traders Website, for example HardHat.
 
-for more information: [More information](https://azure.microsoft.com/es-es/free/).
+For more information: [More information](https://azure.microsoft.com/es-es/free/).
