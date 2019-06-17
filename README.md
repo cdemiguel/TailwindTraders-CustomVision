@@ -18,6 +18,7 @@ To create your first project, select New Project. The Create new project dialog 
 Edit and configure the options as shown in the image.
 It is important select:
 - **Project Types: Classification**
+- **Classification Types: Multiclass**
 - **Domains: Retail (Compact)** - it will allow us to download the model file.
 - **Export Capabilities: Basic Platforms**
 
@@ -83,4 +84,4 @@ If the aplication does not build correctly see considerations part.
 - There's a chance that **we will have to modify the settings of the image in our application** (imageHeight and imageWidth  properties). Testing this example we had to modify these properties to 244 value.(Tailwind.Traders.ImageClassifier.Api).
 - Be sure that you are using categories and items that you have in Tailwind Traders Website, for example HardHat.
 
-For more information: [More information](https://azure.microsoft.com/es-es/free/).
+For more information: [Azure Custom Vision](https://docs.microsoft.com/id-id/azure/cognitive-services/custom-vision-service/home).
