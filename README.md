@@ -6,13 +6,13 @@ Custom Vision service uses a machine learning algorithm to apply labels to image
 In this Readme we are going to explain **how to create and train a model to use in our Tailwind Traders application**. 
 
 ## Prerequisites
-A valid Azure subscription. [Create an account for free](https://azure.microsoft.com/es-es/free/).
+A valid Azure subscription. [Create an account for free](https://azure.microsoft.com/en-us/free/).
 A set of images with which to train your classifier. See below for tips on choosing images.
 
 ## Create a new project
 In your web browser, navigate to the [Custom Vision](https://www.customvision.ai/) web page and select Sign in. Sign in with the same account you used to sign into the Azure portal.
 
-![Log in Custom Vision](./images/LogIn.PNG "Log in Custom Vision")
+![Log in Custom Vision](./images/CV_LogIn.PNG "Log in Custom Vision")
 
 To create your first project, select New Project. The Create new project dialog box will appear.
 Edit and configure the options as shown in the image.
@@ -22,7 +22,7 @@ It is important select:
 - **Domains: Retail (Compact)** - it will allow us to download the model file.
 - **Export Capabilities: Basic Platforms**
 
-![Create project options](./images/CreateProject.PNG "Create project options")
+![Create project options](./images/CV_CreateProject.PNG "Create project options")
 
 ## Upload and tag images
 Once the project is created, you can upload the necessary images to train the model.
@@ -31,16 +31,16 @@ In these case the action is repeated three times one per tag.
 
 To create a tag, enter text in the My Tags field and press Enter. If the tag already exists, it will appear in a dropdown menu. In a multilabel project, you can add more than one tag to your images, but in a multiclass project you can add only one. To finish uploading the images, use the Upload [number] files button.
 
-![Upload and tag images](./images/AddImagesAndTag.PNG "Upload and tag images")
+![Upload and tag images](./images/CV_AddImagesAndTag.PNG "Upload and tag images")
 
 Continue and end the process with all images and tags requiered.
 
-![All images uploaded and tagged](./images/AllUploadedImages.PNG "All images uploaded and tagged")
+![All images uploaded and tagged](./images/CV_AllUploadedImages.PNG "All images uploaded and tagged")
 
 ## Train the classifier
 To train the classifier, select the **Train button**. The classifier uses all of the current images to create a model that identifies the visual qualities of each tag.
 
-![Train model process](./images/TrainModel.PNG "Train model process")
+![Train model process](./images/CV_TrainModel.PNG "Train model process")
 
 The training process should only take a few minutes. During this time, information about the training process is displayed in the Performance tab.
 
@@ -52,7 +52,7 @@ After training has completed, the model's performance is estimated and displayed
 
 - Recall indicates the fraction of actual classifications that were correctly identified. For example, if there were actually 100 images of apples, and the model identified 80 as apples, the recall would be 80%.
 
-![Trained model](./images/EndTrainModel.PNG "Trained model")
+![Trained model](./images/CV_EndTrainModel.PNG "Trained model")
 
 ## Download resources
 Custom Vision Service allows classifiers to be exported to run offline. You can embed your exported classifier into an application and run it locally on a device for real-time classification.
@@ -65,11 +65,11 @@ Select Export button in Performance section.
 
 **This option it is important** because we need the required extension ".pb" for our Tailwind Traders application. 
 
-![Export and download resources](./images/ExportTrainModel.PNG "Export and download resources")
+![Export and download resources](./images/CV_ExportTrainModel.PNG "Export and download resources")
 
 **Clicking download** button must generate and a .zip file with all required resources.
 
-![Results files](./images/Result.PNG "Results files")
+![Results files](./images/CV_Result.PNG "Results files")
 
 
 ## Next steps
